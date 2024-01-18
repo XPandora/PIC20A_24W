@@ -181,11 +181,10 @@ public class Test {
     public static void main(String[] args)
     {
         int x = 10;
-        int a = x++;
         
-        System.out.println(x++); // print 10, x becomes 11
-        System.out.println(++x); // print 12, x becomes 12
-        System.out.println(x++ + ++x); // 12 + 14 = 26
+        System.out.println(x++);
+        System.out.println(++x);
+        System.out.println(x++ + ++x);
     }
 }
 ```
