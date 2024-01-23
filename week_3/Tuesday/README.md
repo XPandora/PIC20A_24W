@@ -113,7 +113,7 @@ In C++, we can either pass parameters by value or by reference. Almost everythin
 
 Take a look at the following code:
 
-```
+```Java
 public class Example {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3};
@@ -137,6 +137,7 @@ This may seem confusing as why something passed by value can still change someth
 2.  When `increment(arr)` is called and `farr` is initialized, both reference the same object:
     ![image](./_resources/8809ce21aa8156abbf61d4a1cefe0f89)
 3.  When `for-loop` is executed and the values are changed, the changes are reflected in both the array references:
+   
     ![image](./_resources/3c8eca6a32ba147a0d8f267edaadfa0c)
 4.  After `increment(arr)` finishes execution and `farr` goes out of scope:
     ![image](./_resources/4b3fa51926c54c4fe45b41d0204a23f6)
