@@ -175,6 +175,12 @@ public class Example {
     }
 }
 ```
+Answers:
+
+```Shell
+False
+True
+```
 
 2\. Finish the method `initializeMatrix` and `transpose` in the following code snippet:
 
@@ -220,4 +226,50 @@ public class Matrix {
         }
     }
 }
+```
+
+Answers:
+
+```Java
+public static int[][] initializeMatrix(int N) {
+        // initialize a N by N matrix
+        // value of each element is N * row_index + col_index
+        // e.g. when N=3, array should be
+        // 0 1 2
+        // 3 4 5
+        // 6 7 8
+
+        // create a 2d array
+        int[][] mat = new int[N][N]; // all the values are set to 0 by default
+
+        // this nested for loop will intialize the values of this matrix
+        for (int r = 0; r < N; r++)
+            for (int c = 0; c < N; c++)
+            {
+                mat[r][c] = N * r + c;
+            }
+
+        return mat;
+    }
+
+    public static void transpose(int[][] mat) {
+        // transpose a matrix
+        // you can assume mat is a square matrix
+        // 0 3 6
+        // 1 4 7
+        // 2 5 8
+
+        int N = mat.length; // get the size of this matrix by accessing the data member *length* of this array
+
+        // we can still use a nested for loop to implement transpose
+        for (int r = 0; r < N; r++)
+            for (int c = r + 1; c < N; c++)
+            {
+                // here what we are going to do is to
+                // switch the value of mat[r][c] with mat[c][r]
+                int temp = mat[r][c];
+                mat[r][c] = mat[c][r];
+                mat[c][r] = temp;
+            }
+    }
 ```
