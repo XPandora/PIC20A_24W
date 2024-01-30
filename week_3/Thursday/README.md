@@ -238,7 +238,17 @@ public class App {
         App puzzle = new App();
     
     	puzzle.print(10.0, 1.5, 'c');
+        // when there is no correponding method that we can directly call
+        // java will help us to do the data conversion to see if we can do this function call
+        // first print is a candidate, java will convert char to double in the implicit way
+        // second print is not a candidate, because conversion from int to double is narrowing
+        // and this can not be achieved in the implicit way
         puzzle.print(10.0, 1, 'c');
+        // we still need to use data conversion and see if there is available functions
+        // first print is okay, int, char -> double, double
+        // seoncd print is also okay, char -> int
+        // we have multiple candidates
+        // in this case, jave will choose closer
     }
 }
 ```
