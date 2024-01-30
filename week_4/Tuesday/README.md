@@ -129,3 +129,14 @@ public class App {
     }
 }
 ```
+
+### Hint for firstPrimes
+```
+// last time, i said you only need to check if N is divisible by some number withinn 2 to square root of N
+// acutually, if a is divisible by b, then a is divisible by some prime factor of b
+// for example, 18 / 6, the prime factors of 6 are 2, 3, this means 18 is also divisible by 2,3
+// insipred by them, we actually dont have to check all the numbers from 2 to square root of N
+// instead, we can only check prime numbers from 2 to square root of N
+// for exmple, 36, we only need to check if 36 can be divided by 2,3,6
+// you dont have to check all the numbers from 2 to 6
+```
