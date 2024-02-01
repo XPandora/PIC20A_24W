@@ -6,7 +6,7 @@ In Java, constructors are special methods used for initializing objects when the
 
 **1\. Default Constructor:** a default constructor is provided by the Java compiler if a class does not explicitly define any constructors. It takes no parameters and initializes fields to default values (e.g., 0 for numeric types, `null` for reference types). The default constructor will be **disabled** if other constructor functions are provided.
 
-```
+```Java
 public class Student {
     public String name;
     public int age;
@@ -22,7 +22,7 @@ public class Student {
 
 **2\. Parameterized Constructor:** a parameterized constructor is a constructor that accepts one or more parameters, allowing you to pass values to initialize object fields.
 
-```
+```Java
 public class Student {
     public String name;
     public int age;
@@ -37,7 +37,7 @@ public class Student {
 
 **3\. Overloaded Constructors:** a class can have multiple constructors with different parameter lists. This is called constructor overloading. You can create constructors with different parameter combinations to provide flexibility when creating objects.
 
-```
+```Java
 public class Student {
     public String name;
     public int age;
@@ -60,7 +60,7 @@ public class Student {
 
 Note: Besides preventing variable shadowing, the `this` keyword can be used to call another constructor within the same class. This is known as constructor chaining.
 
-```
+```Java
 public class Student {
     public String name;
     public int age;
@@ -75,7 +75,7 @@ public class Student {
 
 **5\. Chained Constructors (Constructor Chaining):** Chained constructors allow one constructor to call another constructor of the same class. This is useful when you want to reuse code for common initialization tasks.
 
-```
+```Java
 public class Student {
     public String name;
     public int age;
@@ -95,7 +95,7 @@ public class Student {
 
 **6\. Private Constructor:** A private constructor is used to prevent the instantiation of a class. It is often used in utility classes where objects should not be created.
 
-```
+```Java
 public class UtilityClass {
     private UtilityClass() {
         // disable constructors
@@ -107,7 +107,7 @@ public class UtilityClass {
 
 It is usually a public static method in a class responsible for creating and returning instances of that class or its subclasses based on a set of provided parameters or conditions. The Factory Method design pattern promotes loose coupling and flexibility in object creation by allowing the choice of which class to instantiate to be made at runtime. We will talk about this in the future.
 
-```
+```Java
 public class Person {
     // Fields (data members)
     public String name;
@@ -154,7 +154,7 @@ By default, the `toString` method returns a string that consists of the class na
 
 However, it is common practice to override the `toString` method in your own classes to provide a meaningful and human-readable representation of the object's state. Here's how you can override the `toString` method in your class:
 
-```
+```Java
 public class Person {
     // Fields (data members)
     public String name;
@@ -199,7 +199,7 @@ Finally, write a StudentTester class that:
 - adds courses to the student, which should do a deep copy (create a new array object)
 - prints the student details
 
-```
+```Java
 class Student {
     // fields: name, id, course
 
