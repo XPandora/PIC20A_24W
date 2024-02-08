@@ -2,6 +2,7 @@
 
 ### Problem 1
 **(a)** Compile-time error because `128` cannot be stored as a `byte` and/or `128` is outside the range of `byte`s.
+
 **(b)** 
 - Explicit conversion: `int` to `byte`.
 - Implicit conversion: `byte` to `int`.
@@ -9,6 +10,7 @@
 
 ### Problem 2
 **(a)** output is `true false`.
+
 **(b)** compile-time error because:
  - `i + d` is a double;
  - the only `f` accepting one argument expects an `int`;
@@ -17,9 +19,11 @@
 **(c)** output is `d-2`.
 
 ### Problem 3
-(a) 2 2 (separate lines)
-(b) 3 2 (separate lines)
-(c) 1 2 (separate lines)
+**(a)** 2 2 (separate lines)
+
+**(b)** 3 2 (separate lines)
+
+**(c)** 1 2 (separate lines)
 
 ### Problem 4
 ```
