@@ -157,7 +157,7 @@ class Dog extends Animal {
 
 In this example, `Dog` is a subclass of `Animal`. It inherits the `name` field and `eat` method from `Animal`. This means you can create `Dog` objects and call `eat` on them, even though `eat` is defined in the `Animal` class.
 
-```
+```java
 Dog dog = new Dog("Buddy");
 dog.eat(); // Calls the eat method from the Animal class
 dog.bark(); // Calls the bark method from the Dog class
@@ -281,7 +281,7 @@ class C extends B {
 }
 ```
 
-Each block of code between /* and */ involves two implicit conversions (the assignments) and one explicit conversion (the class names in parentheses).
+Each block of code involves two implicit conversions (the assignments) and one explicit conversion (the class names in parentheses).
 
 For each block, identifying the three conversions and classifying them as widening or narrowing might help you. (Converting C to C is a trivial widening conversion.)
 
