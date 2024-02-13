@@ -251,21 +251,48 @@ Child c = (Child)p; // And then downcast
 ```Java
 public class CastingTester {
     public static void main(String[] args) {
+        // run successfully
+        // first line: trivial casting from C to C, okay
+        // second line: 1. explicit upcasting from C to B, okay
+        // 2. implicit upcasting from B to C, okay 
         // C c = new C();
         // A a = (B) c;
         
+        // compile-time error
+        // first line: implicit downcasting fomr A to C, complie-time error
         // C c = new A();
         // A a = (B) c;
         
+        // compile-time error
+        // first line: implicit upcasting from C to A, okay
+        // second line: 1. trivial casting from A to A, okay
+        // 2. implicit downcasting from A to C, compile-time error
         // A a = new C();
         // C c = (A) a;
         
+        // run successfully
+        // first line: implicit upcasting from C to A, okay
+        // second line: 
+        // 1.a explicit downcasting from A to C, no compile-time error
+        // 1.b this downcasting let a C ref var refers to a C object, no run time error
+        // 2. implicit upcasting from C to B, okay
         // A a = new C();
         // B b = (C) a;
         
+        // run-time error(ClassCastException)
+        // first line: implicit upcasting from B to A, okay
+        // second line: 
+        // 1.a explicit downcasting from A to C, no compile-time error
+        // 1.b this downcasting let a C ref var refers to a B object, but B is the parent class of C! run time error!
         // A a = new B();
         // B b = (C) a;
         
+        // run successfully
+        // first line: implicit upcasting from C to B, okay
+        // second line:
+        // 1.a explicit downcasting from B to C, no compile-time error
+        // 1.b this downcasting let a C ref var refers to a C object, no run time error
+        // 2. implicit upcasting from C to A, okay
         // B b = new C();
         // A a = (C) b;
     }
