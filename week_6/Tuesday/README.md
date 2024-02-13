@@ -167,7 +167,7 @@ dog.bark(); // Calls the bark method from the Dog class
 
 Polymorphism means "many forms", and is a concept in which objects of different classes are treated as objects of a common superclass. It allows you to use a single interface to represent different classes.
 
-```
+```java
 class Animal {
     void makeSound() {
         System.out.println("Some sound");
