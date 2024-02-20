@@ -58,12 +58,24 @@ The following classes are placed in another package (in a file called Exercises1
 ```Java
 public class Exercises1 {
     public static void main(String[] args) {
-        A a = new D();
+        A a = new D(); // implicit upcasting from D to A
 
-        // a.f();
-        // ((A) a).f();
+        // step 1. check the availablity and visibility based on its ref var type
+        // step 2. check the implemtation of this method based on its object type (non-private non-static method)
+
+        // a.f(); method f is not available, error
+        // ((A) a).f(); method f is still not available, error
+
+        // 1. explicit donwcasting from A to B, no compilation error
+        // 2. target ref var B, object type D, if this program runs, no run-time error 
+        // 3. though method f is available, but not visible, compilation error
         // ((B) a).f();
+
+        // the first two points are the same with the previous one
+        // this will run successfully
         // ((C) a).f();
+
+        // same with previous one, this will also run successfully
         // ((D) a).f();
     }
 }
@@ -75,9 +87,9 @@ class E {
 }
 
 class F extends E {
-    // protected void g() {}
-    // private void h() {}
-    // public void j() {}
+    // protected void g() {} // we are trying to reduce the visibility from public to protected, compilation-time error
+    // private void h() {} // this also tries to reduce the visibility, also compilation-time error
+    // public void j() {} // public is more accessible compared to the private, so this is okay
 }
 ```
 
@@ -85,69 +97,3 @@ For each line, say whether uncommenting it would
 
 - give a compile-time error or run-time error;
 - or execute successfully
-
-**Ex.2** Consider the following code (contained in a file called Exercise2.java).
-
-```Java
-public class Exercise2 {
-    public static void main(String[] args) {
-        C c = new C(1, 2);
-    }
-}
-
-class A {
-    public int i;
-
-    public A() {
-        i = 0;
-        System.out.println("A " + i);
-    }
-}
-
-class B extends A {
-    public int j;
-
-    public B(int j) {
-        this.j = j;
-        System.out.println("B " + j);
-    }
-}
-
-class C extends B {
-    public int k;
-
-    public C() {
-        this(0, 0);
-    }
-
-    public C(int j, int k) {
-        super(j);
-        this.k = k;
-        System.out.println("C " + k);
-    }
-}
-```
-
-1.  Write down the output from executing the code above.
-    
-2.  Would adding the following code cause a compile-time error? If so, why?
-    
-    ```java
-    class D extends B {
-        public int p;
-        public D() {
-            p = 0;
-        }
-    }
-    ```
-    
-3.  Would adding the following code cause a compile-time error? If so, why?
-    
-    ```Java
-    class E extends C {
-        public int q;
-        public E() {
-            q = 0;
-        } 
-    }
-    ```
