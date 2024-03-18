@@ -18,29 +18,29 @@
 
 Java Bank
 
-0
+0.0
 
 (b)
 
-Name: Default Account, Money: 0
+Name: Default Account, Balance: 0.0
 
-Name: Michael, Money: 0
+Name: Michael, Balance: 0.0
 
-Name: Michael, Money: 0
+Name: Michael, Balance: 0.0
 
-Name: Lara, Money: 100
+Name: Lara, Balance: 100
 
 100
 
 (c)
 
-Name: Michael, Money: 40
+Name: Michael, Balance: 40
 
-Name: Lara, Money: 80
+Name: Lara, Balance: 80
 
 Insufficient funds.
 
-Name: Default Account, Money: 0
+Name: Default Account, Balance: 0
 
 120
 
